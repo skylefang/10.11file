@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/palette.css">
+    <link rel="stylesheet" href="css/iconfont/iconfont.css">
+    <script src="js/palette.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <main>
+        <ul class="tools">
+            <li id="line" class="iconfont icon-line tool" active="true"></li>
+            <li id="dash" class="iconfont icon-xuxian tool"></li>
+            <li id="pencil" class="iconfont icon-qianbi tool"></li>
+            <li id="rect" class="iconfont icon-juxing tool"></li>
+            <li id="circle" class="iconfont icon-yuan-copy tool"></li>
+            <li id="poly" class="iconfont icon-duobianxing tool"></li>
+            <li id="polyJ" class="iconfont icon-duojiaoxing tool"></li>
+            <div class="fg"></div>
+            <li id="styleS" class="iconfont icon-miaobian tool"></li>
+            <li id="colorS" class="tool">
+                <input type="color">
+            </li>
+            <li id="styleF" class="iconfont icon-tianchong tool"></li>
+            <li id="colorF" class="tool">
+                <input type="color">
+            </li>
+            <div class="fg"></div>
+            <li id="eraser" class="iconfont icon-xiangpi tool"></li>
+            <li id="font" class="iconfont icon-ziti tool"></li>
+            <li id="clip" class="iconfont icon-jiancai1 tool"></li>
+        </ul>
+        <div class="right">
+            <div class="top"></div>
+            <div class="bottom">
+                <canvas width="800" height="500"></canvas>
+                <div class="mask"></div>
+                <div class="xpc"></div>
+                <!--选区-->
+                <div class="clipObj"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas width="300" height="300"></canvas>
+<script>
+    window.onload=function(){
+        let canvas = document.querySelector('canvas');
+        let ctx = canvas.getContext('2d');
+        let t = setTimeout(fn,16,90);
+        let num = 0;
+        function fn(n){
+            num++;
+            if(num==n){
+                clearTimeout(t);
+            }else{
+                t = setTimeout(fn,16,90)
+            }
+            let rad = Math.PI/50*num;
+            ctx.clearRect(0,0,300,300);
+            ctx.beginPath();
+            ctx.lineWidth = 10;
+            ctx.lineCap='round';
+            ctx.arc(150,150,100,-Math.PI/2,rad-Math.PI/2);
+            ctx.stroke();
+            ctx.font = 'bold 20px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText(`${num}%`,150,150);
+        }
+    }
+</script>
+</body>
+</html>
